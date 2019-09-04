@@ -49,7 +49,7 @@ const About = () => {
           </p>
         </div>
         <div className="col-12 text-center">
-          <Button light role="button" href="#">
+          <Button role="button" href="#" className="btn-light">
             Learn more&nbsp;&nbsp;&nbsp;{" "}
             <i
               className="fa fa-long-arrow-right"

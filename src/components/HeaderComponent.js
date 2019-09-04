@@ -120,7 +120,7 @@ class Header extends Component {
           </div>
           <NavbarBrand
             className="navbar-login gray-border d-none d-lg-block"
-            href="/"
+            href="javascript:void(0);"
             onClick={this.toggleModal}
           >
             Member Login
@@ -129,8 +129,8 @@ class Header extends Component {
 
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
-          <ModalBody>
-            <Form onSubmit={this.handleLogin}>
+          <ModalBody className="row">
+            <Form className="col-8 offset-2" onSubmit={this.handleLogin}>
               <FormGroup>
                 <Label htmlFor="username">Username</Label>
                 <InputGroup>
@@ -150,10 +150,11 @@ class Header extends Component {
               <FormGroup>
                 <Label htmlFor="password">Password</Label>
                 <InputGroup>
-                  <InputGroupAddon addonType="prepend"></InputGroupAddon>
-                  <InputGroupText>
-                    <i className="fa fa-key"></i>
-                  </InputGroupText>
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="fa fa-key"></i>
+                    </InputGroupText>
+                  </InputGroupAddon>
                   <Input
                     type="password"
                     id="password"
@@ -162,7 +163,7 @@ class Header extends Component {
                   />
                 </InputGroup>
               </FormGroup>
-              <FormGroup check>
+              <FormGroup check className="text-center mb-3">
                 <Label check>
                   <Input
                     type="checkbox"
@@ -175,16 +176,16 @@ class Header extends Component {
               <div className="form-row justify-content-center my-2">
                 <Button
                   type="button"
-                  className="primary btn-light"
+                  className="primary btn-light mt-0"
                   size="sm"
                   onClick={this.toggleModal}
                 >
-                  Sign in
+                  Cancel
                 </Button>
                 <Button
                   type="submit"
                   value="submit"
-                  className="primary btn-dark"
+                  className="primary btn-dark ml-2"
                   size="sm"
                 >
                   Sign in
