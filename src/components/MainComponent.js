@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Home from "./HomeComponent";
+import Rentals from "./RentalsComponent";
 import Pricing from "./PricingComponent";
 import { PRICES } from "../shared/prices";
 import Header from "./HeaderComponent";
@@ -11,7 +12,12 @@ class Main extends Component {
     super(props);
     this.state = {
       items: PRICES,
-      selectedPrice: null
+      selectedPrice: null,
+      isAbout: false,
+      isBlog: false,
+      isGallery: false,
+      isPricing: false,
+      isRentals: false
     };
   }
   render() {
@@ -25,11 +31,11 @@ class Main extends Component {
             path="/pricing"
             component={() => <Pricing items={this.state.items} />}
           />
-          {/*<Route path="/aboutus" component={" "} />
-          <Route exact path="/menu" component={" "} />
-          <Route path="/menu/:dishId" component={" "} />
-          <Route exact path="/contactus" component={" "} />*/}
-          {/* <Redirect to="/home" /> */}
+          <Route exact path="/rentals" component={Rentals} />
+          {/* <Route exact path="/menu" component={" "} /> */}
+          {/* <Route path="/menu/:dishId" component={" "} /> */}
+          {/* <Route exact path="/contactus" component={" "} /> */}
+          <Redirect to="/home" />
         </Switch>
         <Footer />
       </div>

@@ -96,7 +96,7 @@ class Header extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to=" ">
+                  <NavLink className="nav-link" to="/rentals">
                     Rentals
                   </NavLink>
                 </NavItem>

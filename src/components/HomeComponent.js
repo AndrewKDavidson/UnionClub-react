@@ -283,22 +283,28 @@ const Instagram = () => {
   );
 };
 class Home extends Component {
+  constructor(props) {
+    super(props);
+
+    this.doThisStuffOnScroll = this.doThisStuffOnScroll.bind(this);
+  }
+  doThisStuffOnScroll() {
+    this.didScroll = true;
+  }
+
   componentDidMount() {
+    document.querySelector("#navbar").classList.remove("isScrolling");
     //     const wow = new WOW.WOW();
     //     const parallax = new Parallax(".parallax");
     //     wow.init();
     //     parallax.init();
 
-    let didScroll = false;
-    window.onscroll = doThisStuffOnScroll;
+    window.addEventListener("scroll", this.doThisStuffOnScroll);
+    // window.onscroll = doThisStuffOnScroll;
 
-    function doThisStuffOnScroll() {
-      didScroll = true;
-    }
-
-    setInterval(function() {
-      if (didScroll) {
-        didScroll = false;
+    setInterval(() => {
+      if (this.didScroll) {
+        this.didScroll = false;
         checkScroll();
       }
     }, 100);
@@ -314,6 +320,9 @@ class Home extends Component {
         document.getElementById("navbar").classList.remove("isScrolling");
       }
     }
+  }
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.doThisStuffOnScroll);
   }
 
   render() {
