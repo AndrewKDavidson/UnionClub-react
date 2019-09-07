@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 const RentalsHeader = () => {
   return (
@@ -12,37 +12,37 @@ const RentalsHeader = () => {
           <ul className="list-unstyled list-inline">
             <strong>
               <li className="list-inline-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#0">
                   PAST
                 </a>
               </li>
               &nbsp;&nbsp; –&nbsp;&nbsp;
               <li className="list-inline-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#0">
                   PRESENT
                 </a>
               </li>
               &nbsp;&nbsp; –&nbsp;&nbsp;
               <li className="list-inline-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#0">
                   PRICING
                 </a>
               </li>
               &nbsp;&nbsp; –&nbsp;&nbsp;
               <li className="list-inline-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#0">
                   FEATURES
                 </a>
               </li>
               &nbsp;&nbsp; –&nbsp;&nbsp;
               <li className="list-inline-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#0">
                   PRAISE
                 </a>
               </li>
               &nbsp;&nbsp; –&nbsp;&nbsp;
               <li className="list-inline-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#0">
                   CONTACT
                 </a>
               </li>
@@ -52,6 +52,7 @@ const RentalsHeader = () => {
       </div>
       <div className="text-center header-image">
         <img
+          alt="Responsive"
           className="img-fluid"
           src="https://unionclubtacoma.com/wp-content/uploads/2018/01/DSC09873-1024x683.jpg"
         />
@@ -372,9 +373,6 @@ const Contact = () => {
 };
 
 class Rentals extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   componentDidMount() {
     document.body.classList.add("rentals", "not-home");
     document.querySelector("#navbar").classList.add("isScrolling");

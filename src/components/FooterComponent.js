@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -25,24 +25,24 @@ const Footer = () => {
       </div>
       <div className="row">
         <div className="col-12 footer-links d-flex justify-content-center position-absolute">
-          <ul className="d-flex d-inline justify-content-center flex-wrap justify-content-sm-between  align-items-center list-unstyled">
+          <ul className="d-flex d-inline justify-content-center flex-wrap justify-content-sm-between align-items-center list-unstyled">
             <li className="nav-item">
-              <a href="#">Home</a>
+              <NavLink to="/home">Home</NavLink>
             </li>
             <li className="nav-item">
-              <a href="about.html">About</a>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li className="nav-item right-space">
-              <a href="pricing.html">Pricing</a>
+              <NavLink to="/pricing">Pricing</NavLink>
             </li>
             <li className="nav-item left-space">
-              <a href="rentals.html">Rentals</a>
+              <NavLink to="/Rentals">Rentals</NavLink>
             </li>
             <li className="nav-item">
-              <a href="media.html">Gallery</a>
+              <NavLink to="/Gallery">Gallery</NavLink>
             </li>
             <li className="nav-item">
-              <a href="blog.html">Blog</a>
+              <NavLink to="/Blog">Blog</NavLink>
             </li>
           </ul>
         </div>

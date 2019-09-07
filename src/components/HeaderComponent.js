@@ -86,7 +86,7 @@ class Header extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to="">
+                  <NavLink className="nav-link" to="/about">
                     About
                   </NavLink>
                 </NavItem>
@@ -101,12 +101,12 @@ class Header extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to=" ">
+                  <NavLink className="nav-link" to="/gallery">
                     Gallery
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to=" ">
+                  <NavLink className="nav-link" to="/blog">
                     Blog
                   </NavLink>
                 </NavItem>
@@ -120,7 +120,7 @@ class Header extends Component {
           </div>
           <NavbarBrand
             className="navbar-login gray-border d-none d-lg-block"
-            href="javascript:void(0);"
+            href="#0"
             onClick={this.toggleModal}
           >
             Member Login

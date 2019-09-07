@@ -1,32 +1,40 @@
-import React, { Component } from "react";
-import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Breadcrumb,
-  BreadcrumbItem
-} from "reactstrap";
+import React from "react";
+import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 
+const Jumbotron = () => {
+  return (
+    <header className="jumbotron-pages">
+      <div className="row jumbotron-header">
+        <div className="col-12 vh-center text-center">
+          <h1 className="title">Membership Pricing</h1>
+        </div>
+      </div>
+    </header>
+  );
+};
 function RenderCard({ item }) {
   return (
-    <Card>
-      <CardImg top width="100%" src={item.image} alt={item.name} />
-      <CardBody>
-        <CardTitle>{item.name}</CardTitle>
-        <CardSubtitle>{item.amount}</CardSubtitle>
-        <CardText>{item.description}</CardText>
-      </CardBody>
+    <Card className="prices mb-5">
+      <div class="row">
+        <div class="col-lg-5">
+          <CardImg top width="100%" src={item.image} alt={item.name} />
+        </div>
+        <div class="col-lg-7">
+          <CardBody>
+            <CardTitle>{item.name}</CardTitle>
+            <p>
+              <span class="money">$</span>
+              <strong>{item.amount}</strong> {item.period}
+            </p>
+            <CardText>{item.description}</CardText>
+          </CardBody>
+        </div>
+      </div>
     </Card>
   );
 }
 
 class Pricing extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   componentDidMount() {
     document.body.classList.add("pricing", "not-home");
     document.querySelector("#navbar").classList.add("isScrolling");
@@ -37,39 +45,18 @@ class Pricing extends React.Component {
   render() {
     const pricing = this.props.items.map(item => {
       return (
-        <div className="col-12 col-md-5 m-4" key={item.id}>
+        <div key={item.id}>
           <RenderCard item={item} />
         </div>
       );
     });
     return (
-      <div className="container pricing">
-        <div className="row">
-          <Breadcrumb>
-            <BreadcrumbItem>Home</BreadcrumbItem>
-          </Breadcrumb>
-          <Breadcrumb>
-            <BreadcrumbItem>About</BreadcrumbItem>
-          </Breadcrumb>
-          <Breadcrumb>
-            <BreadcrumbItem active>Membership Pricing</BreadcrumbItem>
-          </Breadcrumb>
-          <Breadcrumb>
-            <BreadcrumbItem>Rentals</BreadcrumbItem>
-          </Breadcrumb>
-          <Breadcrumb>
-            <BreadcrumbItem>Media</BreadcrumbItem>
-          </Breadcrumb>
-          <Breadcrumb>
-            <BreadcrumbItem>Blog</BreadcrumbItem>
-          </Breadcrumb>
-          <div className="col-12">
-            <h3>Membership Pricing</h3>
-            <hr />
-          </div>
+      <>
+        <Jumbotron />
+        <div className="container my-5">
+          <div className="row">{pricing}</div>
         </div>
-        <div className="row">{pricing}</div>
-      </div>
+      </>
     );
   }
 }

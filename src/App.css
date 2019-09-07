@@ -25,14 +25,15 @@
 .subscribe-section h3,
 .jumbotron-pages .title,
 .aboutUs h3,
-.pricing .card h3.card-title,
+.pricing .card h5.card-title,
 .prices .card-body a,
 .rentals .rentals-header h2,
 .rentals .rentals-header h4,
 .rentals h1,
 .rentals .card-title,
 .rentals h3,
-.rentals .disclaimer {
+.rentals .disclaimer,
+.blogBody h3 {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -450,13 +451,13 @@ body.menuExpanded {
     center / cover;
   color: floralwhite;
   width: 100%;
-  height: 60vh;
+  height: 450px;
   z-index: 1;
 }
 
 .pricing .jumbotron-pages {
   background: url("/images/pricing-jumbotron.jpg") center 55% / cover;
-  height: 480px;
+  height: 450px;
 }
 
 .jumbotron.home .jumbotron-header {
@@ -743,7 +744,7 @@ body.menuExpanded {
 }
 
 /* Pricing page */
-.pricing .card h3.card-title {
+.pricing .card h5.card-title {
   color: #333333;
   font-size: 26px;
   font-weight: bold;
@@ -809,7 +810,8 @@ body.menuExpanded {
   font-size: 36px;
 }
 
-.rentals .rentals-header h2 {
+.rentals .rentals-header h2,
+.galleryBody .media-h2 {
   position: relative;
   font-size: 46px;
   margin-bottom: 52px;
@@ -824,7 +826,8 @@ body.menuExpanded {
   font-size: 16px;
 }
 
-.rentals .rentals-header h2:after {
+.rentals .rentals-header h2:after,
+.galleryBody .media-h2:after {
   position: absolute;
   left: 50%;
   bottom: -52px;
@@ -898,9 +901,21 @@ body.menuExpanded {
 }
 
 /*Blog Page, Gallery Page */
+.blogBody {
+  padding-top: 75px;
+}
+
 .blogCard,
 .galCard {
   width: 22rem;
+}
+
+.galleryBody,
+.blogBody {
+  background-color: rgb(249, 249, 249);
+}
+.galleryBody .card-body .rooms {
+  height: 3rem;
 }
 
 /* Media Queries */
@@ -951,8 +966,9 @@ body.menuExpanded {
   .jumbotron-pages .title {
     font-size: 50px;
   }
-  .jumbotron-pages {
-    height: 40vh;
+  .jumbotron-pages,
+  .pricing .jumbotron-pages {
+    height: 340px;
   }
   .rentals .rentals-header h2 {
     font-size: 36px;
