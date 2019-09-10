@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, Input } from "reactstrap";
-// import WOW from "wow.js";
+import Wow from "wow.js";
+import Parallax from "scroll-parallax";
 
 const Jumbotron = () => {
   return (
@@ -113,7 +114,7 @@ const Benefits = () => {
   );
 };
 
-const Parallax = () => {
+const ParallaxScroll = () => {
   return (
     // <!-- setting up the parallax -->
     <figure className="parallax-figure">
@@ -294,10 +295,10 @@ class Home extends Component {
 
   componentDidMount() {
     document.querySelector("#navbar").classList.remove("isScrolling");
-    //     const wow = new WOW.WOW();
-    //     const parallax = new Parallax(".parallax");
-    //     wow.init();
-    //     parallax.init();
+    const wow = new Wow();
+    wow.init();
+    const para = new Parallax(".parallax");
+    para.init();
 
     window.addEventListener("scroll", this.doThisStuffOnScroll);
     // window.onscroll = doThisStuffOnScroll;
@@ -331,7 +332,7 @@ class Home extends Component {
         <Jumbotron />
         <About />
         <Benefits />
-        <Parallax />
+        <ParallaxScroll />
         <Contact />
         <Subscribe />
         <Instagram />

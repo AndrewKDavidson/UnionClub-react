@@ -353,7 +353,7 @@ body.menuExpanded {
 }
 
 .navbar.isScrolling a:hover,
-.not-home .navbar.isScrolling .nav-item.active a {
+.not-home .navbar.isScrolling .nav-item a.active {
   border-bottom: 2px solid #333;
 }
 

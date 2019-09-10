@@ -1,4 +1,5 @@
 import React from "react";
+import Carousel1 from "./RentalsCarousel";
 
 const RentalsHeader = () => {
   return (
@@ -74,81 +75,6 @@ const BodyContent = () => {
         Carving night. The Union Club has seen a lot of life over the years and
         we’re so grateful to continue in that tradition.
       </p>
-    </div>
-  );
-};
-
-const Carousel1 = () => {
-  return (
-    <div className="carousel slide" data-ride="carousel" id="mycarousel">
-      <div className="carousel-inner px-3">
-        <div className="carousel-item active">
-          <div className="row">
-            <div className="col-4">
-              <img
-                className="d-block mx-auto img-fluid"
-                src="https://unionclubtacoma.com/wp-content/uploads/2018/01/Richards_Studio_D2530310-1-182x200.jpg"
-                alt="1 slide"
-              />
-            </div>
-            <div className="col-4">
-              <img
-                className="d-block mx-auto img-fluid"
-                src="https://unionclubtacoma.com/wp-content/uploads/2018/01/Richards_Studio_D2530313-1-182x200.jpg"
-                alt="2 slide"
-              />
-            </div>
-            <div className="col-4">
-              <img
-                className="d-block mx-auto img-fluid"
-                src="https://unionclubtacoma.com/wp-content/uploads/2018/01/Richards_Studio_D25303A-1-182x200.jpg"
-                alt="3 slide"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="row">
-            <div className="col-4">
-              <img
-                className="d-block mx-auto img-fluid"
-                src="https://unionclubtacoma.com/wp-content/uploads/2018/01/Richards_Studio_D253031-2-182x200.jpg"
-                alt="4 slide"
-              />
-            </div>
-            <div className="col-4">
-              <img
-                className="d-block mx-auto img-fluid"
-                src="https://unionclubtacoma.com/wp-content/uploads/2018/01/Richards_Studio_D253033-1-182x200.jpg"
-                alt="5 slide"
-              />
-            </div>
-            <div className="col-4">
-              <img
-                className="d-block mx-auto img-fluid"
-                src="https://unionclubtacoma.com/wp-content/uploads/2018/01/website-3-182x200.jpg"
-                alt="6 slide"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <a
-        className="carousel-control-prev"
-        href="#mycarousel"
-        role="button"
-        data-slide="prev"
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-      </a>
-      <a
-        className="carousel-control-next"
-        href="#mycarousel"
-        role="button"
-        data-slide="next"
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-      </a>
     </div>
   );
 };
@@ -322,33 +248,35 @@ const Contact = () => {
         <form>
           <div className="form-row">
             <div className="form-group col-md-6">
-              <label for="name">First Name (Required)</label>
+              <label htmlFor="name">First Name (Required)</label>
               <input type="name" className="form-control" id="firstName" />
             </div>
             <div className="form-group col-md-6">
-              <label for="name">Last Name (Required)</label>
+              <label htmlFor="name">Last Name (Required)</label>
               <input type="name" className="form-control" id="lastName" />
             </div>
           </div>
           <div className="form-group">
-            <label for="email">Your Email (Required)</label>
+            <label htmlFor="email">Your Email (Required)</label>
             <input type="text" className="form-control" id="email" />
           </div>
           <div className="form-group">
-            <label for="telephone">Your Telephone (Required)</label>
+            <label htmlFor="telephone">Your Telephone (Required)</label>
             <input type="text" className="form-control" id="telephone" />
           </div>
           <div className="form-row">
             <div className="form-group col-md-6">
-              <label for="date">Event Date (Required)</label>
+              <label htmlFor="date">Event Date (Required)</label>
               <input type="date" className="form-control" id="date" />
             </div>
             <div className="form-group col-md-6">
-              <label for="guests">Estimated Number of Guests (Required)</label>
+              <label htmlFor="guests">
+                Estimated Number of Guests (Required)
+              </label>
               <input type="text" className="form-control" id="guests" />
             </div>
             <div className="form-group col-md-12">
-              <label for="info">
+              <label htmlFor="info">
                 Additional information about your event (Required)
               </label>
               <textarea
